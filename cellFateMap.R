@@ -66,7 +66,7 @@ cellFateMapAsynchronous<-function(net,attractors,numberOfIterations=1){
       }                
     }
     simulations<-simulations+cellFateMap
-    cat("Iteration ",j," of",numberOfIterations,"\n")
+    #cat("Iteration ",j," of",numberOfIterations,"\n")
     j<-j+1
   }
   cfm<- simulations / ( length(net$genes) * numberOfIterations )
