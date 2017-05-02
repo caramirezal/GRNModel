@@ -18,5 +18,7 @@ simplifyCellFateMap.R simplifies the matrix of transitions between attractors me
 
 tagAttractors.R sistematically tags attractors according to molecular signatures that relates to phenotypes.
 
+fixedEnvironments.R performs simulations on fixed environments. 
 
+rmNodes.R systematically removes every interaction in each node Boolean expression and record whether the attractors of the Wild Type network are presented in the new attractors. It returns a table with the fraction of attractors that match these criteria.
 
