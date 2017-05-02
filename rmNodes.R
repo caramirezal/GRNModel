@@ -59,19 +59,107 @@ rmNodeTest <- function(net){
         
 }
 
+## This expression parse a node name
+##grep("^a[[:punct:]| ]|[[:punct:]| ]a[[:punct:]| ]|[ |[:punct:]]a$",c("a ","aaa"," a ","&a&", " a "))
 
 library(BoolNet)
+library(dplyr)
 
+source("tagAttractors.R")
+source("usefulFunctions.R")
+source("tagAttractorsMatrix.R")
+source("getTransitionMatrix.R")
 netDirectInt <- loadNetwork("regulatoryNetworkGMPModelDirectInteractions.txt")
 netFull <- loadNetwork("regulatoryNetworkGMPModel.txt")
 
-n = 1
-netStrings <- readLines("regulatoryNetworkGMPModel.txt")
-netStrings[n+1] <- rmNode(netFull$genes[1],netStrings[n+1]) 
-write(netStrings,"newNet.txt",sep = "\n")
+rmInteractions <- function(file,attractors,phenotypes){
+        
+        net <- loadNetwork(file)
+        
+        res <- list("affectedNode"=c(),"removedNode"=c(),"percentageConservedAttractors"=c())
+        
+        netLines <- readLines(file)
+        
+        taggedAttractors <- tagAttractorsMatrix(net = net, attractors = attractors, patternsList = phenotypes)
+        
+        attList <- lapply(1:length(taggedAttractors[1,]), function(x) taggedAttractors[,x] )
+        
+        taggedAttractors <- colnames(taggedAttractors)
+        
+        booleanExp <- sapply(net$interactions,function(x) x$expression)
+        
+        for (i in 1:length(booleanExp)) {
+                
+                regulators <- net$genes[ net$interactions[[i]]$input ]
+                
+                for (j in regulators) {
+                        
+                        newExp <- rmNode(j,booleanExp[i])
+                        
+                        if (newExp == "") {
+                                
+                                newExp <- net$genes[i]
+                                
+                        }
+                        
+                        newExp <- paste(net$genes[i],", ",newExp,sep = "")
+                        
+                        newNetStrings <- netLines
+                        
+                        newNetStrings[i+1] <- newExp
+                        
+                        write(newNetStrings,sep = "\n",file = "newNet.tmpl")
+                        
+                        newNet <- loadNetwork("newNet.tmpl")
 
+                        
+                        newAtt <- getAttractors(newNet,startStates = attList,
+                                                type = "asynchronous")
+                        
+                        newTagAtt <- tagAttractorsMatrix(newNet,newAtt,patternsList = phenotypes)
+                        
+                        newTagAtt <- colnames(newTagAtt)
+                        
+                        newTagAtt <- newTagAtt[newTagAtt %in% taggedAttractors]
+                        
+                        perConAtt <- length(newTagAtt) / length(taggedAttractors) 
+                        
+                        res$"affectedNode" <- c(res$"affectedNode",net$genes[i])
+                        
+                        res$"removedNode" <- c(res$"removedNode",j)
+                        
+                        res$"percentageConservedAttractors" <- c(res$"percentageConservedAttractors",perConAtt)
+                        
+                
+                }
+                
+        }
+        
+        file.remove("newNet.tmpl")
+        
+        res <- as.data.frame(res)
+        
+        arrange(res, percentageConservedAttractors)
+        
+}
 
-readLines("newNet.txt")
-## This expression parse a node name
-##grep("^a[[:punct:]| ]|[[:punct:]| ]a[[:punct:]| ]|[ |[:punct:]]a$",c("a ","aaa"," a ","&a&", " a "))
+# loading the full BRN model
+net<-loadNetwork("regulatoryNetworkGMPModel.txt")
+
+# definition of the phenotype patterns. In the full model
+# CCR3, CEBPb, and IL3Ra signalling is added.
+monocytes<-c("mcsfr"=1,"pu1"=1)
+neutrophils<-c("lf"=1, "cebpa"=1)
+eosinophils<-c("fceRIa"=1,"gata1"=1,"cebpa"=1,"ccr3"=1)
+basophils<-c("cebpa"=1,"gata2"=1,"runx1"=1,"ccr3"=0)
+mast<-c("mitf"=1,"ckit"=1,"cebpa"=0)
+Lne<-c("mcsfr"=0,"lf"=0,"mbp"=0,"ckit"=0,"fceRIa"=0,"ccr3"=0)
+phenotypes<-list("monocytes"=monocytes,"neutrophils"=neutrophils,
+                 "eosinophils"=eosinophils,"mast cells"=mast,
+                 "Lne"=Lne,"basophils"=basophils)
+
+# calculate attractors
+#attractors<-getAttractors(net, method = "sat.exhaustive")
+
+#rs <- rmInteractions(file = "regulatoryNetworkGMPModel.txt",attractors = attractors,phenotypes = phenotypes )
 
