@@ -22,3 +22,4 @@ fixedEnvironments.R performs simulations on fixed environments.
 
 rmNodes.R systematically removes every interaction in each node Boolean expression and record whether the attractors of the Wild Type network are presented in the new attractors. It returns a table with the fraction of attractors that match these criteria.
 
+rmInteractions.tb contains a table with the full list of removed regulators and the fractions of attractors which used as initial states reach phenotypes as that passed as arguments. This table is the ouput of rmInteractions() contained in the rmNOdes.R file.
