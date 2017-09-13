@@ -5,6 +5,7 @@
 library(BoolNet)
 library(dplyr)
 source("usefulFunctions.R")
+source("extractAttractors.R")
 
 ## loading interactions database
 interactions.db <- read.csv("additionalInfo/SupInfo/modelInteractions.csv")
@@ -31,5 +32,40 @@ interactions.r$"symbol" <- interactions.s
 interactions.r <- mutate(interactions.r, interaction=paste(regulator,symbol,node,sep = ""))
 ## definition of network topology
 topology <- paste(interactions.r$interaction,collapse = ",")
+topology <- paste("known = {",topology,"}",sep="")
+topology
 
+## genes input to griffin 
+genesInput <- paste(net$genes[regulators],collapse = ",")
+genesInput <- paste("genes = {",genesInput,"}",sep = "")
+genesInput
+
+## options
+#options
+options <- "allow.ambiguity = false
+allow.additional.states = true 
+allow.additional.cycles = true 
+allow.hypotheses = true 
+block.steady.a.posteriori = false 
+divide.query.by.topology = false"
+
+attractors <- getAttractors(net,
+                            type="synchronous",
+                            method = "sat.exhaustive")
+attractors.m <- extractAttractors(net,attractors)
+attractors.m <- attractors.m[regulators,]
+
+attractorsInput <- sapply(1:length(attractors.m[1,]),
+                          function(x) 
+                                  paste(attractors.m[,x],
+                                        collapse=""))
+attractorsInput <- paste(attractorsInput,collapse=",")
+attractorsInput <- paste("fixed-points() = {",
+                         attractorsInput,"}",
+                         sep ="")
+
+
+## writting griffing input
+writeLines(text =  c(genesInput,topology,attractorsInput,options),
+           con = "model_checking_gata2.grf")
 
