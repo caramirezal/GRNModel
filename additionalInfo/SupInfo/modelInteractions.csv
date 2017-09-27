@@ -1,0 +1,84 @@
+node,molecularFunction,regulator,type,behavior,Molecular.technique,Specie,Cell.line,PMID
+cebpa,transcription factor,cebpa,direct,positive,FTP EMSA LA,Human Murine,Hep3B2 3T3,2006196 7862113
+cebpa,transcription factor,mitf,direct,negative,QPCR CHIP LA,Murine,KO mice,21454593
+cjun,transcription factor,cebpa,direct,negative,RTPCR NB WB LA,Human Murine,U937 HL60 293T HeLa KO mice,18026136 12446786 
+ckit,receptor,gata1,direct,positive,MA FAC WB CHIP,Murine,G1EER LAD2,16024808
+ckit,receptor,gata2,direct,positive,RTPCR ChIP EMSA FC,Human Murine,293T BALBc mice LAD2 PT18,20833840
+ckit,receptor,mitf,direct,positive,NB FC EMSA LA,Murine,FDCP1 FMA3,8695840
+ckit,receptor,scl,direct,positive,CHIP  ,Murine,L8057 BMMC G1E,19011221
+cmyb,transcription factor,pu1,direct,negative,NB EMSA CAT,Human Murine,Jurkat TK 32Dcl,9292515
+egr,transcription factor,gfi1,direct,negative,RTPCR LA   ,Murine,C57 ,16923394
+egr,transcription factor,pu1,direct,positive,RTPCR WB,Murine,C57 ,16923394
+fceRIa,receptor,gata1,direct,positive,EMSA  LA,Human Murine,PT18 KU812,11971001 10395650 11971001
+fceRIa,receptor,gata2,direct,positive,EMSA  LA,Human Murine,PT18 KU812,11971001 10395650 11971001
+fceRIa,receptor,pu1,direct,positive,EMSA LA,Human Murine,PT18 KU812,11971001
+fceRIb,receptor,gata1,direct,positive,EMSA LA,Murine,CV1 PT18,12496417
+gata1,transcription factor,gata1,direct,positive,FP LA CHIPSEQ,Murine,MEL 3T3 MEG Donor cells,21571218 2044960
+gata2,transcription factor,gata1,direct,positive,RTPCR WB CHIP,Murine,G1E 3T3,12857954  15494394 
+gata2,transcription factor,gata2,direct,positive,RTPCR CHIP LA GFPKI,Murine,E11K1 TG mice MEL 3T3 G1ME,12857954  15494394 19371385 21571218
+gfi1,transcription factor,cebpa,direct,positive,RTPCR WB LA CHIP,Human Murine,CMV CD34 donor derived cells C57 32D,16923394
+gfi1,transcription factor,egr,direct,negative,RTPCR LA CHIP,Murine,C57 HPC7 3T3 ,16923394
+gmcsfr,receptor,pu1,direct,positive,RTPCR QPCR CHIP,Murine,PUER mice cells,3123020
+gmcsfr,receptor,runx1,direct,positive,RTPCR QPCR CHIP,Murine,PUER mice cells,3123020
+lf,antimicrobial protein,cebpa,direct,positive,EMSA LA CHIP,Murine Human,U937 32D,10845904 9326246
+mbp,antimicrobial protein,cebpa,direct,positive,EMSA ,Human  ,AML CV1,12202480
+mbp,antimicrobial protein,gata1,direct,positive,EMSA  LA,Human,CV1 AML JURKAT,12202480 12202480 
+mbp,antimicrobial protein,gata2,direct,positive,RTPCR EMSA,Human  ,AML C57,12202480 12202480
+mbp,antimicrobial protein,pu1,direct,positive,EMSA  LA,Human  ,CV1 AML,12202480
+mccpa,antimicrobial protein,gata2,direct,positive,EMSA HGH,Murine,3T3  ,1744088
+mcsfr,receptor,cjun,direct,positive,LA  ,Murine,CV1 F9,9988737
+mcsfr,receptor,gata1,direct,positive,LA  ,Murine,CV1 F9,10411939
+mcsfr,receptor,gata2,direct,positive,LA  ,Murine,CV1 F9,10411939
+mcsfr,receptor,pu1,direct,positive,RTPCR QPCR CHIP LA,Murine,PUER mice cells CV1 F9,3123020 10411939
+mcsfr,receptor,runx1,direct,positive,RTPCR QPCR CHIP,Murine,PUER mice cells,3123020
+mitf,transcription factor,cebpa,direct,negative,CHIP LA,Murine,KO mice,21454593
+mitf,transcription factor,ckit,direct,positive,WB RTPCR,Human Murine,C57 HMC1,21273305
+mmcp6,antimicrobial protein,cjun,direct,positive,NB LA  ,Human Murine,IC2 MC9 3T3,15464728
+mmcp6,antimicrobial protein,mitf,direct,positive,NB LA EMSA,Murine,3T3  , 7802662 11751862 10467408
+mpo,antimicrobial protein,cebpa,direct,positive,EMSA  CHIP,Murine,WEHI 32D FDCP,8855267
+mpo,antimicrobial protein,pu1,direct,positive,EMSA  CHIP,Murine,WEHI 32D FDCP,8855267
+ne,antimicrobial protein,cebpa,direct,positive,LA EMSA,Murine Human,3T3 HL60 CV-1 32D,8756629
+ne,antimicrobial protein,cmyb,direct,positive,LA EMSA,Murine Human,3T3 HL60 CV1 32D,8756629
+ne,antimicrobial protein,pu1,direct,positive,LA EMSA,Murine Human,3T3 HL60 CV-1 32D,8756629
+pu1,transcription factor,cebpa,direct,positive,CIP EMSA CHIP NB,Human Murine,293T 32D BAF3 C57 U937 ,18026136
+pu1,transcription factor,cjun,direct,positive,CIP EMSA CHIP,Human Murine,293T 32D BAF3 C57,18026136
+pu1,transcription factor,gfi1,direct,negative,RTPCR  CHIP EMSA,Murine,C57 ,19818654
+pu1,transcription factor,pu1,direct,positive,LA CHIP EMSA CHIPSEQ,Murine,KO mice cells RAW264,8663022 21239694 15767686
+pu1,transcription factor,runx1,direct,positive,RTPCR CHIP EMSA LA,Murine,416B KO mice cells,17994017
+runx1,transcription factor,gata2,direct,positive,LA CHIP  LACZ CHIPSEQ,Murine,C57 CBA Inbreed 416B Blood Human donor,17823307 21571218
+runx1,transcription factor,pu1,direct,positive,LA CHIP LACZ,Murine,C57 CBA Inbreed 416B,17823307
+runx1,transcription factor,runx1,direct,positive,LA CHIP LACZ CHIPSEQ,Murine,C57 CBA Inbreed 416B Blood Human donor,17823307 21571218
+scl,transcription factor,gata1,direct,positive,CHIP LA,Murine,KO mice,17709394
+scl,transcription factor,scl,direct,positive,CHIP LA,Murine,KO mice,17709394
+bc,transcription factor,cebpa,indirect,positive,EMSA CAT,Human,U937 293T HeLa KO mice,9808557
+bc,transcription factor,pu1,indirect,positive,EMSA CAT,Human,U937 HL60 293T HeLa KO mice,10453008 9808557
+ccr3,receptor,gata1,indirect,positive,WB EMSA GSTPD LA,Human,K562,21041734
+ccr3,receptor,pu1,indirect,positive,WB EMSA GSTPD LA,Human,K562,21041734
+ccr3,receptor,runx1,indirect,positive,WB EMSA GSTPD LA,Human,K562,21041734
+cebpb,transcription factor,stat5,indirect,positive,WB NB CHIP,Murine,BaF3 ,12574125
+cmyb,transcription factor,cebpa,indirect,negative,WB EMSA CHIP,Human Murine,K562 32D,18550858
+gata2,transcription factor,stat5,indirect,positive,FC CHIP ,Murine,BMMC,25801432
+gcsfr,receptor,cebpa,indirect,positive,LA  EMSA,Human,U937  ,9632814
+gcsfr,receptor,pu1,indirect,positive,LA EMSA ,Human,U937  ,9632814
+jak2,kinase,bc,indirect,positive,CIP  ,Human  ,TF1,7935454
+jak2,kinase,gmcsfr,indirect,positive,CIP LA,Murine,BaF3 ,8647882
+jak2,kinase,il3ra,indirect,positive,WB  ,Murine,BaF3 ,9558373
+lf,antimicrobial protein,egr,indirect,negative,RTPCR WB  ,Murine,C57 ,16923394
+mbp,antimicrobial protein,cebpb,indirect,positive,EMSA ,Human  ,AML HT39A JURKAT,12202480 12202480
+mbp,antimicrobial protein,gcsfr,indirect,negative,RTPCR WB,Human Murine,HL60 32D,22552881
+mbp,antimicrobial protein,gfi1,indirect,negative,RTPCR WB,Human Murine,HL60 32D,22552881
+mmcp6,antimicrobial protein,ckit,indirect,positive,NB  ,Murine,IC2  ,8605325
+stat5,transcription factor,jak2,indirect,positive,EMSA CIP WB,Human,MATa,9575217
+ccr3,receptor,cebpa,proposed,positive,NA,NA,NA,17079688
+il3ra,receptor,gata1,proposed,positive,NA,NA,NA,7858255
+il3ra,receptor,gata2,proposed,positive,NA,NA,NA,7858255
+lf,antimicrobial protein,gata2,proposed,negative,NA,NA,NA,17079688
+lf,antimicrobial protein,gata2,proposed,negative,NA,NA,NA,17079688
+mccpa,antimicrobial protein,ckit,proposed,positive,NA,NA,NA,1372640
+mccpa,antimicrobial protein,mitf,proposed,positive,NA,NA,NA,1372640
+mpo,antimicrobial protein,egr,proposed,negative,NA,NA,NA,16923394
+mpo,antimicrobial protein,gata1,proposed,negative,NA,NA,NA,17079688
+mpo,antimicrobial protein,gata2,proposed,negative,NA,NA,NA,17079688
+ne,antimicrobial protein,egr,proposed,negative,NA,NA,NA,16923394
+ne,antimicrobial protein,gata1,proposed,negative,NA,NA,NA,17079688
+ne,antimicrobial protein,gata2,proposed,negative,NA,NA,NA,17079688

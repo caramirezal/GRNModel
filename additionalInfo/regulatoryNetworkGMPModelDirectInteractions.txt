@@ -1,0 +1,23 @@
+targets, factors
+cebpa, cebpa & ! mitf
+cjun, ! cebpa
+egr, ! gfi1 & pu1
+gfi1, cebpa & ! egr
+gata1, gata1
+gata2, gata1 | gata2 
+mitf, ! cebpa & ckit
+pu1, pu1 | runx1 | ( cebpa & cjun ) & ! gfi1
+runx1, ( gata2 & pu1 ) | runx1 
+cmyb, ! pu1
+scl, scl & gata1
+mcsfr, ( ( pu1 & runx1 ) | ( pu1 & cjun ) ) & ! ( gata1 | gata2 )
+gmcsfr, pu1 & runx1
+ne, ( cebpa | cmyb ) & pu1
+mpo, cebpa & pu1
+lf, cebpa
+mbp, cebpa & ( gata1 | gata2 ) & pu1 
+mmcp6, mitf & cjun
+mccpa, gata2
+ckit, ( ( scl & gata1 ) | gata2 ) & mitf
+fceRIb, gata1
+fceRIa, ( gata1 | gata2 ) & pu1
