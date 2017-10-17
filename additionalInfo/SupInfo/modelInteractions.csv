@@ -1,8 +1,8 @@
 node,molecularFunction,regulator,type,behavior,Molecular.technique,Specie,Cell.line,PMID
-cebpa,transcription factor,cebpa,direct,positive,FTP EMSA LA,Human Murine,Hep3B2 3T3,2006196 7862113
+cebpa,transcription factor,cebpa,direct,positive,EMSA LA,Human Murine,Hep3B2 3T3,2006196 7862113
 cebpa,transcription factor,mitf,direct,negative,QPCR CHIP LA,Murine,KO mice,21454593
 cjun,transcription factor,cebpa,direct,negative,RTPCR NB WB LA,Human Murine,U937 HL60 293T HeLa KO mice,18026136 12446786 
-ckit,receptor,gata1,direct,positive,MA FAC WB CHIP,Murine,G1EER LAD2,16024808
+ckit,receptor,gata1,direct,positive,FC WB CHIP,Murine,G1EER LAD2,16024808
 ckit,receptor,gata2,direct,positive,RTPCR ChIP EMSA FC,Human Murine,293T BALBc mice LAD2 PT18,20833840
 ckit,receptor,mitf,direct,positive,NB FC EMSA LA,Murine,FDCP1 FMA3,8695840
 ckit,receptor,scl,direct,positive,CHIP  ,Murine,L8057 BMMC G1E,19011221
@@ -25,7 +25,7 @@ mbp,antimicrobial protein,cebpa,direct,positive,EMSA ,Human  ,AML CV1,12202480
 mbp,antimicrobial protein,gata1,direct,positive,EMSA  LA,Human,CV1 AML JURKAT,12202480 12202480 
 mbp,antimicrobial protein,gata2,direct,positive,RTPCR EMSA,Human  ,AML C57,12202480 12202480
 mbp,antimicrobial protein,pu1,direct,positive,EMSA  LA,Human  ,CV1 AML,12202480
-mccpa,antimicrobial protein,gata2,direct,positive,EMSA HGH,Murine,3T3  ,1744088
+mccpa,antimicrobial protein,gata2,direct,positive,EMSA,Murine,3T3  ,1744088
 mcsfr,receptor,cjun,direct,positive,LA  ,Murine,CV1 F9,9988737
 mcsfr,receptor,gata1,direct,positive,LA  ,Murine,CV1 F9,10411939
 mcsfr,receptor,gata2,direct,positive,LA  ,Murine,CV1 F9,10411939
@@ -55,7 +55,7 @@ bc,transcription factor,pu1,indirect,positive,EMSA CAT,Human,U937 HL60 293T HeLa
 ccr3,receptor,gata1,indirect,positive,WB EMSA GSTPD LA,Human,K562,21041734
 ccr3,receptor,pu1,indirect,positive,WB EMSA GSTPD LA,Human,K562,21041734
 ccr3,receptor,runx1,indirect,positive,WB EMSA GSTPD LA,Human,K562,21041734
-cebpb,transcription factor,stat5,indirect,positive,WB NB CHIP,Murine,BaF3 ,12574125
+cebpb,transcription factor,stat5,indirect,positive,WB NB CIP,Murine,BaF3 ,12574125
 cmyb,transcription factor,cebpa,indirect,negative,WB EMSA CHIP,Human Murine,K562 32D,18550858
 gata2,transcription factor,stat5,indirect,positive,FC CHIP ,Murine,BMMC,25801432
 gcsfr,receptor,cebpa,indirect,positive,LA  EMSA,Human,U937  ,9632814
@@ -82,3 +82,19 @@ mpo,antimicrobial protein,gata2,proposed,negative,NA,NA,NA,17079688
 ne,antimicrobial protein,egr,proposed,negative,NA,NA,NA,16923394
 ne,antimicrobial protein,gata1,proposed,negative,NA,NA,NA,17079688
 ne,antimicrobial protein,gata2,proposed,negative,NA,NA,NA,17079688
+,,,,,,,,
+,,,,,,,,
+Abbreviation,Molecular technique,,,,,,,
+CIP,Coimmunoprecipitation,,,,,,,
+EMSA,Electrophoretical mobility assay,,,,,,,
+GSTPD,Glutatione S-transferase pull down,,,,,,,
+FC ,Flow cytometry,,,,,,,
+NB,Northern Blot,,,,,,,
+WB ,Western Blot,,,,,,,
+RTPCR,Real time polimerase chain reaction,,,,,,,
+CAT,Chloramphenicol acetyltransferase,,,,,,,
+LACZ,LacZ,,,,,,,
+CHIP,Chromatin immune precipitation,,,,,,,
+CHIPSEQ,Chromatin immune precipitation sequentiation,,,,,,,
+QPCR,Quenched polimerase chain reaction,,,,,,,
+GFPKI,Green flourescence protein Knock in,,,,,,,
