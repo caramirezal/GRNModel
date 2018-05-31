@@ -1,8 +1,8 @@
 # takes a list of nodes with values and performs fixed environment simulations
 fixEnvironment <- function(net,fixValues,attractors,phenotypes,...){
         fixNodes <- sapply(names(fixValues),function(x) which(x==net$genes))
-        att.wt <-tagAttractorsMatrix(net=net,attractors=attractors,patternsList = phenotypes)
-        att.wt <- unique(colnames(att.wt))
+        taggedAttractors <-tagAttractorsMatrix(net=net,attractors=attractors,patternsList = phenotypes)
+        att.wt <- unique(colnames(taggedAttractors))
         attlist <- list()
         for (i in 1:length(taggedAttractors[1,])){
                 attlist[[i]] <- taggedAttractors[,i]
@@ -22,14 +22,7 @@ fixEnvironment <- function(net,fixValues,attractors,phenotypes,...){
         res
 }
 
-newAtt <- fixEnvironment(net,fixValues,attractors,phenotypes)
-newAtt
 
-fixedEnvironments <- list("ProNeu"=c("cebpa"=1,"pu1"=0),
-                        "ProMono"=c("cebpa"=0,"pu1"=1),
-                        "Promast"=c("il3ra"=1,"ckit"=1),
-                        "ProEo"=c("cebpa"=1,"gata1"=1,"gata2"=1),
-                        "Probas"=c("cebpa"=1,"gata1"=1,"pu1"=0))
 
 simEnvironments <- function(net,fixedEnvironments,attractors,phenotypes,envNames="default",...){
         
@@ -47,13 +40,24 @@ simEnvironments <- function(net,fixedEnvironments,attractors,phenotypes,envNames
         
         colnames(res) <- names(fixedEnvironments)
         
-        plotAttractors.a(t(as.matrix(res)))
+        #plotAttractors.a(t(as.matrix(res)))
         
         res
         
         
 }
 
-res <- simEnvironments(net,fixedEnvironments,attractors,phenotypes)
+
+# fixValues <- c("cebpa"=1,"pu1"=0)
+#newAtt <- fixEnvironment(net,fixValues,attractors,phenotypes)
+#newAtt
+
+#fixedEnvironments <- list("ProNeu"=c("cebpa"=1,"pu1"=0),
+#                          "ProMono"=c("cebpa"=0,"pu1"=1),
+#                          "Promast"=c("il3ra"=1,"ckit"=1),
+#                          "ProEo"=c("cebpa"=1,"gata1"=1,"gata2"=1),
+#                          "Probas"=c("cebpa"=1,"gata1"=1,"pu1"=0))
+
+#res <- simEnvironments(net,fixedEnvironments,attractors,phenotypes)
 
 
