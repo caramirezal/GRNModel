@@ -15,6 +15,6 @@ the paper are provided in the RegulatoryNetworkGMPModel.ipynb
 The following image shows a schematic graph representation
 of the regulatory network model.
 
-![](figures/networkExtended.jpg =500x500)
+<img src="figures/networkExtended.jpg" style="width:350px;height:400px;">
 
 
